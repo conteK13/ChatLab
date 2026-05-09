@@ -1,0 +1,9 @@
+@baseUrl = {{$dotenv CHATLAB_BACKEND_URL}}
+
+### Ask Current Time Without Tool
+POST {{baseUrl}}/chat/message
+Content-Type: application/json
+
+{
+  "message": "현재 시간을 알려줘."
+}
