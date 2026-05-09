@@ -1,0 +1,21 @@
+@baseUrl = {{$dotenv CHATLAB_BACKEND_URL}}
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Send Message
+POST {{baseUrl}}/chat/message
+Content-Type: application/json
+
+{
+  "message": "안녕하세요. 당신에 대한 간단한 자기 소개를 해주세요."
+}
+
+### Send Message With System Prompt
+POST {{baseUrl}}/chat/message
+Content-Type: application/json
+
+{
+  "system_prompt": "말끝에 냐냥냥을 붙여서 답변해줘",
+  "message": "LangChain이 무엇인지 짧게 설명해줘."
+}
