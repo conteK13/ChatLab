@@ -7,3 +7,19 @@ Content-Type: application/json
 {
   "message": "현재 시간을 알려줘."
 }
+
+### Ask Current Location With Tools
+POST {{baseUrl}}/chat/message
+Content-Type: application/json
+
+{
+  "message": "현재 시간과 위치를 알려줘."
+}
+
+### Ask Weather With Tools
+POST {{baseUrl}}/chat/message
+Content-Type: application/json
+
+{
+  "message": "현재 날씨 알려줘."
+}
