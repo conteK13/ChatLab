@@ -2,6 +2,7 @@ import re
 
 import streamlit as st
 
+from chat import render_chat_tab
 from docs import (
     LessonDocument,
     get_lesson_documents,
@@ -82,11 +83,6 @@ def render_document_list(documents: list[LessonDocument]) -> LessonDocument:
         st.query_params["doc"] = selected_document.document_id
 
     return selected_document
-
-
-def render_chat_tab() -> None:
-    st.subheader("챗봇")
-    st.info("챗봇 기능은 다음 단계에서 연결합니다.")
 
 
 def _render_internal_links(markdown_text: str) -> str:
