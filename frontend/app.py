@@ -62,7 +62,7 @@ def render_docs_tab() -> None:
 
     with viewer_column:
         content = read_lesson_document(selected_document)
-        st.markdown(content)
+        st.markdown(content, unsafe_allow_html=True)
 
 
 def render_document_list(documents: list[LessonDocument]) -> LessonDocument:
